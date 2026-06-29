@@ -1,0 +1,64 @@
+# Users table (already exists, add role column)
+php artisan make:migration add_role_to_users_table ✅
+column information: ✅
+
+# Technicians table
+php artisan make:migration create_technicians_table ✅
+column information: ❌
+
+# Equipment table
+php artisan make:migration create_equipment_table ✅
+column information: ❌
+
+# Work Orders table
+php artisan make:migration create_work_orders_table ✅
+column information: ✅
+
+# Maintenance Schedules table
+php artisan make:migration create_maintenance_schedules_table ✅
+column information: ✅
+
+# Spare Parts table
+php artisan make:migration create_spare_parts_table ✅
+column information: ❌
+
+# Invoices table
+php artisan make:migration create_invoices_table ✅
+column information: ❌
+
+# Client Requests table
+php artisan make:migration create_client_requests_table ✅
+column information: ❌
+
+# Notifications table
+php artisan make:migration create_notifications_table ✅
+column information: ❌
+
+# GPS Tracking table
+php artisan make:migration create_gps_trackings_table ✅
+column information: ❌
+
+# Performance Analytics table
+php artisan make:migration create_performance_analytics_table ✅
+column information: ❌
+
+
+
+php artisan make:model User ✅
+relationship: ✅
+php artisan make:model WorkOrder ✅
+relationship: ❌
+php artisan make:model MaintenanceSchedule ✅
+relationship: ❌
+php artisan make:model Equipment ✅
+relationship: ❌
+php artisan make:model SparePart ✅
+relationship: ❌
+php artisan make:model Invoice ✅
+relationship: ❌
+php artisan make:model ClientRequest ✅
+relationship: ❌
+php artisan make:model GPSTracking ✅
+relationship: ❌
+php artisan make:model PerformanceAnalytic ✅
+relationship: ❌

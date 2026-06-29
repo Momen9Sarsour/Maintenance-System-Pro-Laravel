@@ -1,0 +1,30 @@
+
+ الخطوة 1: إنشاء مشروع Laravel جديد
+composer create-project laravel/laravel maintenance-system ✅
+
+# Laravel Breeze (Authentication)
+composer require laravel/breeze   ✅
+php artisan breeze:install blade  ✅
+npm install  ✅
+npm run build  ✅
+
+# Notifications & WebSockets
+composer require pusher/pusher-php-server  ✅
+composer require laravel/websockets  ❌
+
+# PayPal Payment
+composer require srmklive/paypal  ✅
+
+# Stripe (Visa/Credit Card)
+composer require stripe/stripe-php  ✅
+
+# Excel Export
+composer require maatwebsite/excel  ✅
+
+# GPS & Maps
+composer require laravelium/sitemap  ✅
+
+# Charts
+composer require consoleTVs/Charts  ✅
+npm install chart.js   ✅
+
