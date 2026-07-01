@@ -113,13 +113,36 @@ class User extends Authenticatable
         return $this->hasMany(PerformanceAnalytic::class);
     }
 
+    // public function notifications()
+    // {
+    //     return $this->hasMany(Notification::class);
+    // }
+
+    public function assignedEquipment()
+    {
+        return $this->hasMany(Equipment::class, 'assigned_technician_id');
+    }
+
     public function notifications()
     {
         return $this->hasMany(Notification::class);
     }
 
-    public function assignedEquipment()
+    // جلب الإشعارات غير المقروءة
+    public function unreadNotifications()
     {
-        return $this->hasMany(Equipment::class, 'assigned_technician_id');
+        return $this->notifications()->where('is_read', false);
+    }
+
+    // عدد الإشعارات غير المقروءة
+    public function unreadNotificationsCount()
+    {
+        return $this->unreadNotifications()->count();
+    }
+
+    // جلب الإشعارات المقروءة
+    public function readNotifications()
+    {
+        return $this->notifications()->where('is_read', true);
     }
 }

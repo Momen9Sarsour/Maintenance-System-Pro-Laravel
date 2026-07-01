@@ -15,12 +15,15 @@ return new class extends Migration
             $table->id();
 
             $table->foreignId('user_id')->constrained()->onDelete('cascade');
-            $table->string('type'); // info, success, warning, error
+            $table->enum('type', ['info', 'success', 'warning', 'error'])->default('info');
             $table->string('title');
             $table->text('message');
             $table->boolean('is_read')->default(false);
             $table->string('link')->nullable();
             $table->string('icon')->nullable();
+            // فهارس لتسريع البحث
+            $table->index(['user_id', 'is_read']);
+            $table->index(['user_id', 'type']);
 
             $table->timestamps();
         });
