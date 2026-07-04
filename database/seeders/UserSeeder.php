@@ -13,7 +13,7 @@ class UserSeeder extends Seeder
         // Admin
         User::create([
             'name' => 'System Admin',
-            'email' => 'admin@maintenance.com',
+            'email' => 'admin@gmail.com',
             'password' => Hash::make('123456789'),
             'role' => 'admin',
             'phone' => '+966 50 000 0000',
@@ -24,7 +24,7 @@ class UserSeeder extends Seeder
         // Manager
         User::create([
             'name' => 'Maintenance Manager',
-            'email' => 'manager@maintenance.com',
+            'email' => 'manager@gmail.com',
             'password' => Hash::make('123456789'),
             'role' => 'manager',
             'phone' => '+966 50 111 1111',
@@ -37,7 +37,7 @@ class UserSeeder extends Seeder
         $technicians = [
             [
                 'name' => 'Demo Technician',
-                'email' => 'tech@maintenance.com',
+                'email' => 'tech@gmail.com',
                 'specialization' => 'HVAC Systems',
                 'phone' => '+966 55 001 00303',
             ],
@@ -155,7 +155,7 @@ class UserSeeder extends Seeder
         // Data Entry
         User::create([
             'name' => 'Data Entry',
-            'email' => 'dataentry@maintenance.com',
+            'email' => 'dataentry@gmail.com',
             'password' => Hash::make('123456789'),
             'role' => 'data_entry',
             'phone' => '+966 50 222 2222',

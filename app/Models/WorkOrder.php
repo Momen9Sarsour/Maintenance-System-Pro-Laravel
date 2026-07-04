@@ -58,4 +58,26 @@ class WorkOrder extends Model
     {
         return $this->hasMany(GPSTracking::class);
     }
+
+    /**
+     * Update SLA status based on due date.
+     */
+    public function updateSlaStatus()
+    {
+        $now = now();
+        $due = $this->due_date;
+
+        if ($this->status === 'completed') {
+            $this->sla_status = 'on_time';
+        } elseif ($now > $due) {
+            $this->sla_status = 'overdue';
+        } elseif ($now->diffInDays($due) <= 3) {
+            $this->sla_status = 'due_soon';
+        } else {
+            $this->sla_status = 'on_time';
+        }
+
+        $this->save();
+        return $this;
+    }
 }

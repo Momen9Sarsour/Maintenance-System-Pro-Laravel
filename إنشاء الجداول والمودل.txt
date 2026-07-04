@@ -62,3 +62,19 @@ php artisan make:model GPSTracking ✅
 relationship: ❌
 php artisan make:model PerformanceAnalytic ✅
 relationship: ❌
+
+# Seeder رئيسي
+php artisan make:seeder DatabaseSeeder
+
+# Seeders لكل جدول
+php artisan make:seeder UserSeeder
+php artisan make:seeder TechnicianSeeder
+php artisan make:seeder EquipmentSeeder
+php artisan make:seeder SparePartSeeder
+php artisan make:seeder WorkOrderSeeder
+php artisan make:seeder MaintenanceScheduleSeeder
+php artisan make:seeder ClientRequestSeeder
+php artisan make:seeder InvoiceSeeder
+php artisan make:seeder NotificationSeeder
+php artisan make:seeder GPSTrackingSeeder
+php artisan make:seeder PerformanceAnalyticSeeder
