@@ -672,7 +672,7 @@
             <!-- ASSETS & EQUIPMENT -->
             <div class="menu-label mt-3">Assets & Equipment</div>
             <div class="nav-item">
-                <a href="#" class="nav-link">
+                <a href="{{ route('admin.equipment.index') }}" class="nav-link">
                     <i class="fas fa-microchip"></i> Equipment
                 </a>
             </div>
@@ -747,7 +747,7 @@
             <!-- USER MANAGEMENT -->
             <div class="menu-label mt-3">User Management</div>
             <div class="nav-item">
-                <a href="#" class="nav-link">
+                <a href="{{ route('admin.technicians.index') }}" class="nav-link">
                     <i class="fas fa-users"></i> Technicians
                 </a>
             </div>
@@ -757,7 +757,7 @@
                 </a>
             </div>
             <div class="nav-item">
-                <a href="#" class="nav-link">
+                <a href="{{ route('admin.clients.index') }}" class="nav-link">
                     <i class="fas fa-user-friends"></i> Clients
                 </a>
             </div>
